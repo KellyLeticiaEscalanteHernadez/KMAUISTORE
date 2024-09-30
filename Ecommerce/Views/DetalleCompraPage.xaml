@@ -5,6 +5,7 @@
              x:Class="Ecommerce.Views.DetalleCompraPage"
              Title=""
              Shell.TabBarIsVisible="False"
+             BackgroundColor="#820000"
              >
     <StackLayout Orientation="Vertical" Spacing="10" Padding="15">
         <Label Text="Detalle de pago" FontSize="Title" FontAttributes="Bold"/>
@@ -95,6 +96,6 @@
             <Label Text="Total" FontSize="Subtitle" FontAttributes="Bold"/>
             <Label Text="{Binding TotalCompra, StringFormat='{0:C}'}" FontSize="Subtitle" FontAttributes="Bold" HorizontalOptions="EndAndExpand" TextColor="#1d94ab"/>
         </StackLayout>
-        <Button Text="Realizar compra" Command="{Binding RealizarCompraEventCommand}"/>
+        <Button Text="Realizar compra" BackgroundColor="#1d94ab" Command="{Binding RealizarCompraEventCommand}"/>
     </StackLayout>
 </ContentPage>

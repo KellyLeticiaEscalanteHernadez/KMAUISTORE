@@ -6,6 +6,7 @@
              
              Shell.NavBarIsVisible="False"
              Shell.TabBarIsVisible="False"
+             BackgroundColor="LightCoral"
              >
 
     <StackLayout Orientation="Vertical" Spacing="10">

@@ -8,15 +8,14 @@
     Shell.FlyoutBehavior="Disabled">
 
     <FlyoutItem Title="Configuracion">
-        
-        <Tab Title="Inicio"  Icon="home_icon">       
+        <Tab Title="Inicio"  Icon="home_icon">
             <ShellContent
                 Title="KMAUISTORE"
                 ContentTemplate="{DataTemplate views:MainPage}"
                 Route="MainPage">
                 <ContentPage>
                     <StackLayout>
-                        <Image Source="dotnet_bot.svg" HorizontalOptions="Center" HeightRequest="100" WidthRequest="100"/>
+                        <Image Source="logolk" HorizontalOptions="Center" HeightRequest="100" WidthRequest="100"/>
                     </StackLayout>
                 </ContentPage>
             </ShellContent>

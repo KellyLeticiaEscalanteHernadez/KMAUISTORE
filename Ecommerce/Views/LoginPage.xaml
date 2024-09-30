@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:Ecommerce.ViewsModels"
              x:Class="Ecommerce.Views.LoginPage"
-             Title="LoginPage">
+             Title="LoginPage"
+             BackgroundColor="#820000">
 
     <ContentPage.BindingContext>
         <vm:LoginViewModel/>
@@ -17,24 +18,28 @@
         </Grid.RowDefinitions>
 
 
-        <StackLayout Grid.Row="1" Orientation="Vertical" Spacing="10">
-            <Image Source="loger.png" HorizontalOptions="Center" HeightRequest="100" WidthRequest="100"/>
+        <StackLayout Grid.Row="1" Orientation="Vertical" Spacing="30">
+            <Border Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0"  StrokeThickness="2" Stroke="LightPink">
+                <Image Margin="0,0" HeightRequest="250" WidthRequest="300" Source="login.png" VerticalOptions="Center" HorizontalOptions="Center" Aspect="AspectFit" />
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="50,0,0,50"/>
+                </Border.StrokeShape>
+            </Border>
 
             <Label Text="Bienvenido" TextColor="#101010" FontSize="Title" HorizontalOptions="Center" FontAttributes="Bold"></Label>
 
             <StackLayout Orientation="Vertical" Margin="0,10" Spacing="5" HorizontalOptions="Center">
                 <Label Text="Ingrese sus credenciales" TextColor="LightSlateGray" FontSize="Small" HorizontalOptions="Center"/>
-                <!--<Label Text="*Usuario:  Kelly" TextColor="LightSlateGray" FontSize="Small" HorizontalOptions="Center"/>
-                <Label Text="*Contraseña:  123" TextColor="LightSlateGray" FontSize="Small" HorizontalOptions="Center"/>-->
             </StackLayout>
 
 
             <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" Padding="30,0">
-                <Entry Text="{Binding Usuario}" Placeholder="Usuario"/>
-                <Entry Text="{Binding Password}" Placeholder="Contraseña" IsPassword="True"/>
+                <Entry Text="{Binding Usuario}" Grid.Row="3" Placeholder="Usuario"/>
+                <Entry Text="{Binding Password}" Grid.Row="3" Placeholder="Contraseña" IsPassword="True"/>
 
-                <Button Text="Iniciar sesion" HeightRequest="50" FontSize="Medium" BackgroundColor="#1d94ab" Command="{Binding LoginCommand}"/>
-            </StackLayout>
+                <Button  Grid.Row="5"  TextColor="Black" Text="Iniciar sesion" HeightRequest="50" FontSize="Medium" BackgroundColor="White" Command="{Binding LoginCommand}"/>
+                <Button  Grid.Row="6" TextColor="Black" Text="¿No tienes una cuenta? Regístrese aquí" HeightRequest="50" FontSize="Medium" BackgroundColor="#1d94ab" Command="{Binding RegisterCommand}"/>
+            </StackLayout> 
 
         </StackLayout>
     </Grid>

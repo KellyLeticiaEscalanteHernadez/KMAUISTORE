@@ -13,22 +13,30 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            
-            <Label Grid.Row="0" Text="Bienvenid@s!!" FontSize="Title" FontAttributes="Bold"/>
 
+            <Label Grid.Row="0" Text="Bienvenid@s!!" FontSize="Title" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+           
             <VerticalStackLayout Grid.Row="1" Spacing="10">
-                <Label Text="Aprovecha nuestros productos" FontSize="Subtitle"/>
-                <Image HeightRequest="200" Aspect="AspectFill"  Source="banner.jpg"/>
-  
+                <Label Text="Aprovecha nuestros productos" FontSize="Subtitle" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Border
+                      Grid.RowSpan="3"
+                      BackgroundColor="LightCoral"
+                      HeightRequest="250"
+                      Stroke="LightPink"
+                      StrokeShape="RoundRectangle 30, 30, 30, 30"
+                      StrokeThickness="3"
+                      WidthRequest="308">
+                    <Image HeightRequest="250" Aspect="AspectFill"  Source="banner.jpg" WidthRequest="308"/>
+                </Border>
+               
+
             </VerticalStackLayout>
-            
+
 
             <VerticalStackLayout Grid.Row="2" Spacing="15">
-
-                <Label Text="Categorias" FontSize="Large"/>
-                
-
-                <CollectionView SelectionMode="Single" HeightRequest="50" BackgroundColor="White" ItemsSource="{Binding Categorias}"
+                <Label Text="Categorias" FontSize="Large" />
+                <CollectionView SelectionMode="Single" HeightRequest="50" BackgroundColor="LightSteelBlue" ItemsSource="{Binding Categorias}"
                                 SelectedItem="{Binding CategoriaSeleccionada}"
                                 SelectionChangedCommand="{Binding CategoriaEventSelectedCommand}"
                                 >

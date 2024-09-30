@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:Ecommerce.DTOs"
              x:Class="Ecommerce.Views.CarritoPage"
-             Title="Bolsa"
-             >
+             Title="Bolsa">
 
 
     <Grid RowSpacing="5">
@@ -16,7 +15,7 @@
 
         <StackLayout Grid.Row="0" Orientation="Vertical">
 
-            <StackLayout Orientation="Horizontal" BackgroundColor="WhiteSmoke" HeightRequest="50">
+            <StackLayout Orientation="Horizontal" BackgroundColor="#820000" HeightRequest="50">
                 <Label  Text="Total:" FontSize="Subtitle" VerticalOptions="Center" Margin="15,0"/>
                 <Label Text="{Binding Total, StringFormat='{0:C}'}"  TextColor="#1d94ab" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="15,0" FontAttributes="Bold" FontSize="Subtitle"/>
             </StackLayout>
@@ -94,7 +93,7 @@
             </CollectionView>
         </ScrollView>
 
-        <StackLayout Grid.Row="2" Orientation="Horizontal" BackgroundColor="WhiteSmoke" Padding="10">
+        <StackLayout Grid.Row="2" Orientation="Horizontal" BackgroundColor="#820000" Padding="10">
             <Button Text="Continuar" HorizontalOptions="EndAndExpand" WidthRequest="150" BackgroundColor="#3E8EED" 
                     Command="{Binding ContinuarEventCommand}"
                     ></Button>

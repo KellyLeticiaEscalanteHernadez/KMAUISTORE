@@ -4,6 +4,7 @@
              x:Class="Ecommerce.Views.DetalleProducto"
              Title="Detalle Producto"
              Shell.TabBarIsVisible="False"
+             BackgroundColor="#820000"
              >
 
     <ScrollView>

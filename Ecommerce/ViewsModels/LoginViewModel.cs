@@ -1,5 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Ecommerce.Views;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.Maui.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,15 +21,26 @@ namespace Ecommerce.ViewsModels
         [RelayCommand]
         private async Task Login()
         {
-            if(Usuario == "Kelly" && Password == "123")
+            var user = await App.Database.GetUserAsync(Usuario);
+
+            if (user != null && user.Password == Password)
             {
                 Preferences.Set("logueado", "si");
                 Application.Current.MainPage = new AppShell();
+                await Application.Current.MainPage.DisplayAlert("Inicio de sesión", "¡Inicio de sesión exitoso!", "OK");
             }
             else
             {
-                await Application.Current.MainPage.DisplayAlert("Mensaje", "No se encontraron coincidencias", "Aceptar");
+                await Application.Current.MainPage.DisplayAlert("Fallido", "Nombre de usuario o contraseña no válidos. Por favor, inténtelo de nuevo.", "Aceptar");
             }
+        }
+
+        [RelayCommand]
+        private async Task Register()
+        {
+            //await Application.Current.MainPage.Navigation.PushAsync(new RegisterPage());// Volver a la página de inicio de sesión
+
+           Application.Current.MainPage=new RegisterPage();
         }
     }
 }
