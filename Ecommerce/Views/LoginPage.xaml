@@ -35,9 +35,9 @@
 
             <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" Padding="30,0">
                 <Entry Text="{Binding Usuario}" Grid.Row="3" Placeholder="Usuario"/>
-                <Entry Text="{Binding Password}" Grid.Row="3" Placeholder="Contraseña" IsPassword="True"/>
-
-                <Button  Grid.Row="5"  TextColor="Black" Text="Iniciar sesion" HeightRequest="50" FontSize="Medium" BackgroundColor="White" Command="{Binding LoginCommand}"/>
+                <Entry Text="{Binding Password}" Grid.Row="3" Placeholder="Contraseña" IsPassword="True" Margin="0,0,0,10"/>
+                <Label Text="{Binding ErrorMessage}" TextColor="Black" IsVisible="{Binding IsErrorVisible}" />
+                <Button  Grid.Row="5"  TextColor="Black" Text="Iniciar sesion" HeightRequest="50" FontSize="Medium" BackgroundColor="White" Command="{Binding LoginCommand}" Margin="0,0,0,10"/>
                 <Button  Grid.Row="6" TextColor="Black" Text="¿No tienes una cuenta? Regístrese aquí" HeightRequest="50" FontSize="Medium" BackgroundColor="#1d94ab" Command="{Binding RegisterCommand}"/>
             </StackLayout> 
 
