@@ -9,38 +9,39 @@
     <ContentPage.BindingContext>
         <vm:RegisterViewModel/>
     </ContentPage.BindingContext>
+    <Frame BackgroundColor="#820000" BorderColor="White" HeightRequest="750" WidthRequest="350">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="1*" />
-        </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="1" Orientation="Vertical" Spacing="30">
+                <Border Grid.Row="5" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0"  StrokeThickness="2" Stroke="LightPink">
+                    <Image Margin="0,0" HeightRequest="250" WidthRequest="300" Source="login.png" VerticalOptions="Center" HorizontalOptions="Center" Aspect="AspectFit" />
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="50,0,0,50"/>
+                    </Border.StrokeShape>
+                </Border>
+
+                <Label Text="Registrate" TextColor="#101010" FontSize="Title" HorizontalOptions="Center" FontAttributes="Bold"></Label>
+
+                <StackLayout Orientation="Vertical" Margin="0,0" Spacing="0" HorizontalOptions="Center">
+                    <Label Text="Ingrese sus credenciales" TextColor="White" FontSize="Small" HorizontalOptions="Center"/>
+                </StackLayout>
 
 
-        <StackLayout Grid.Row="1" Orientation="Vertical" Spacing="30">
-            <Border Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0"  StrokeThickness="2" Stroke="LightPink">
-                <Image Margin="0,0" HeightRequest="250" WidthRequest="300" Source="login.png" VerticalOptions="Center" HorizontalOptions="Center" Aspect="AspectFit" />
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="50,0,0,50"/>
-                </Border.StrokeShape>
-            </Border>
+                <VerticalStackLayout Padding="30">
+                    <Entry Text="{Binding Usuario}" Grid.Row="3" Placeholder="Email" />
+                    <Entry Text="{Binding Password}" Grid.Row="3" Placeholder="Password" IsPassword="True" Margin="0,0,0,10"/>
+                    <Label Text="{Binding ErrorMessage}" TextColor="Black" IsVisible="{Binding IsErrorVisible}" />
+                    <Button Grid.Row="4" Text="Registrar" HeightRequest="50" FontSize="Medium" TextColor="Black" BackgroundColor="#1d94ab" Command="{Binding RegisterCommand}" Margin="0,0,0,10"/>
+                    <Button  Grid.Row="5" Text="Volver" HeightRequest="50" FontSize="Medium" TextColor="Black" BackgroundColor="White" Command="{Binding VolverCommand}" />
+                </VerticalStackLayout>
 
-            <Label Text="Registrate" TextColor="#101010" FontSize="Title" HorizontalOptions="Center" FontAttributes="Bold"></Label>
-
-            <StackLayout Orientation="Vertical" Margin="0,0" Spacing="0" HorizontalOptions="Center">
-                <Label Text="Ingrese sus credenciales" TextColor="White" FontSize="Small" HorizontalOptions="Center"/>
             </StackLayout>
-
-
-            <VerticalStackLayout Padding="30">
-                <Entry Text="{Binding Usuario}" Grid.Row="3" Placeholder="Email" />
-                <Entry Text="{Binding Password}" Grid.Row="3" Placeholder="Password" IsPassword="True" Margin="0,0,0,10"/>
-                <Label Text="{Binding ErrorMessage}" TextColor="Black" IsVisible="{Binding IsErrorVisible}" />
-                <Button Grid.Row="4" Text="Registrar" HeightRequest="50" FontSize="Medium" TextColor="Black" BackgroundColor="#1d94ab" Command="{Binding RegisterCommand}" Margin="0,0,0,10"/>
-                <Button  Grid.Row="5" Text="Volver" HeightRequest="50" FontSize="Medium" TextColor="Black" BackgroundColor="White" Command="{Binding VolverCommand}" />
-            </VerticalStackLayout>
-
-        </StackLayout>
-    </Grid>
+        </Grid>
+    </Frame>
 </ContentPage>

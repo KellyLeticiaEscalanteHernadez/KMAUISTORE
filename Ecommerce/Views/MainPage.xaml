@@ -13,12 +13,15 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
+            <Border HorizontalOptions="FillAndExpand" Stroke="LightPink">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="50,0,0,50"/>
+                </Border.StrokeShape>
+            </Border>
+            <Label Grid.Row="0" Text="Bienvenidos" TextColor="White" FontSize="Title" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
-            <Label Grid.Row="0" Text="Bienvenid@s!!" FontSize="Title" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-
-           
             <VerticalStackLayout Grid.Row="1" Spacing="10">
-                <Label Text="Aprovecha nuestros productos" FontSize="Subtitle"  FontFamily="Charger Sport Black Extended" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="Aprovecha nuestros productos y disfruta la mejor conexio con nosotros" FontSize="Subtitle" FontFamily="Charger Sport Black Extended" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                 <Border
                       Grid.RowSpan="3"
                       BackgroundColor="LightCoral"
@@ -35,8 +38,8 @@
 
 
             <VerticalStackLayout Grid.Row="2" Spacing="15">
-                <Label Text="Categorias" FontSize="Large" />
-                <CollectionView SelectionMode="Single" HeightRequest="50" BackgroundColor="LightSteelBlue" ItemsSource="{Binding Categorias}"
+                <Label Text="Categorias" FontSize="Large" FontAttributes="Bold"/>
+                <CollectionView SelectionMode="Single" HeightRequest="50" BackgroundColor="LightPink" ItemsSource="{Binding Categorias}"
                                 SelectedItem="{Binding CategoriaSeleccionada}"
                                 SelectionChangedCommand="{Binding CategoriaEventSelectedCommand}"
                                 >
@@ -66,7 +69,7 @@
             </VerticalStackLayout>
 
             <VerticalStackLayout Grid.Row="3" Spacing="15">
-                <Label Text="Mejores Productos" FontSize="Large"/>
+                <Label Text="Mejores Productos" FontSize="Large" FontAttributes="Bold"/>
                 <CollectionView HeightRequest="320" SelectionMode="Single" ItemsSource="{Binding MejoresProductos}"
                                 SelectedItem="{Binding ProductoSeleccionado}" SelectionChangedCommand="{Binding ProductoEventSelectedCommand}"
                                 >

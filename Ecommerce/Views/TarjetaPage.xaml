@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ecommerce.Views.TarjetaPage"
              Title="TarjetaPage"
-             BackgroundColor="LightCoral"
+             BackgroundColor="LightPink"
              Shell.NavBarIsVisible="False"
              Shell.TabBarIsVisible="False"
              >
