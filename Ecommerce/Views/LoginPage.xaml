@@ -29,7 +29,7 @@
             <Label Text="Bienvenido" TextColor="#101010" FontSize="Title" HorizontalOptions="Center" FontAttributes="Bold"></Label>
 
             <StackLayout Orientation="Vertical" Margin="0,10" Spacing="5" HorizontalOptions="Center">
-                <Label Text="Ingrese sus credenciales" TextColor="LightSlateGray" FontSize="Small" HorizontalOptions="Center"/>
+                <Label Text="Ingrese sus credenciales" TextColor="LightSlateGray" FontSize="Small" FontFamily="Charger Sport Black Extended" HorizontalOptions="Center"/>
             </StackLayout>
 
 

@@ -19,7 +19,7 @@
         </Grid.RowDefinitions>
 
         <Image Grid.Row="1" HeightRequest="100" WidthRequest="100" Source="foto_perfil.JPG" HorizontalOptions="Center" />
-        <Label Grid.Row="2" Text="Jhon Smith" FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center"  />
+        <Label Grid.Row="2" Text="Usuario" FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center"  />
         <StackLayout Grid.Row="3" Grid.RowSpan="3" Orientation="Vertical" Spacing="10">
             
             <Frame Padding="10">

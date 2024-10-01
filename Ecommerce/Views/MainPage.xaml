@@ -18,7 +18,7 @@
 
            
             <VerticalStackLayout Grid.Row="1" Spacing="10">
-                <Label Text="Aprovecha nuestros productos" FontSize="Subtitle" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="Aprovecha nuestros productos" FontSize="Subtitle"  FontFamily="Charger Sport Black Extended" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                 <Border
                       Grid.RowSpan="3"
                       BackgroundColor="LightCoral"

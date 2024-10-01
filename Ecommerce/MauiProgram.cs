@@ -16,7 +16,8 @@ public static class MauiProgram
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			});
+                fonts.AddFont("charger-sport-black-extended.ttf", "chargersportblackextended");
+            });
 
         //PASO 2.-  Agregar el contexto a la base de datos y la pagina
         builder.Services.AddDbContext<EcommerceDbContext>();

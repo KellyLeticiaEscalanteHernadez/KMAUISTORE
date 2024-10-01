@@ -9,7 +9,7 @@
              >
     <StackLayout Orientation="Vertical" Spacing="10" Padding="15">
         <Label Text="Detalle de pago" FontSize="Title" FontAttributes="Bold"/>
-        <Label Text="Acontinuación debe seleccionar la dirección de envio y la tarjeta de pago. Proximamente retiros en tienda" TextColor="SlateGray" FontSize="Small"/>
+        <Label Text="Acontinuación debe seleccionar la dirección de envio y la tarjeta de pago. Proximamente retiros en tienda" TextColor="SlateGray"  FontFamily="Charger Sport Black Extended" FontSize="Small"/>
         <Border HorizontalOptions="FillAndExpand" Stroke="#dadada"></Border>
         
         <StackLayout Orientation="Horizontal" Spacing="10">
