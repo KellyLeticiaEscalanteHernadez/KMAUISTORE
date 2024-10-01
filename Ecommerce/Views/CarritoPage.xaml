@@ -17,7 +17,7 @@
 
             <StackLayout Orientation="Horizontal" BackgroundColor="#820000" HeightRequest="50">
                 <Label  Text="Total:" FontSize="Subtitle" VerticalOptions="Center" Margin="15,0"/>
-                <Label Text="{Binding Total, StringFormat='{0:C}'}"  TextColor="#1d94ab" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="15,0" FontAttributes="Bold" FontSize="Subtitle"/>
+                <Label Text="{Binding Total, StringFormat='{0:C}'}"  TextColor="Black" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="15,0" FontAttributes="Bold" FontSize="Subtitle"/>
             </StackLayout>
             <Border HorizontalOptions="FillAndExpand"></Border>
         </StackLayout>
@@ -72,7 +72,7 @@
 
                                 <StackLayout Grid.Column="2"  Orientation="Vertical">
                                     <Label  Text="{Binding Total, StringFormat='{0:C}'}" FontSize="Subtitle" TextColor="#1d94ab" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" />
-                                    <Label Text="Eliminar" HorizontalOptions="EndAndExpand" TextColor="IndianRed">
+                                    <Label Text="Eliminar" HorizontalOptions="EndAndExpand" TextColor="Black" FontAttributes="Bold">
                                         <Label.GestureRecognizers>
                                             <TapGestureRecognizer 
                                                 Command="{Binding BindingContext.EliminarEventCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}"
@@ -94,7 +94,7 @@
         </ScrollView>
 
         <StackLayout Grid.Row="2" Orientation="Horizontal" BackgroundColor="#820000" Padding="10">
-            <Button Text="Continuar" HorizontalOptions="EndAndExpand" WidthRequest="150" BackgroundColor="#3E8EED" 
+            <Button Text="Continuar"  TextColor="Black" FontAttributes="Bold" HorizontalOptions="EndAndExpand" WidthRequest="150" BackgroundColor="#3E8EED" 
                     Command="{Binding ContinuarEventCommand}"
                     ></Button>
         </StackLayout>

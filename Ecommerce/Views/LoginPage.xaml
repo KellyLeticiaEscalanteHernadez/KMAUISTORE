@@ -26,7 +26,7 @@
                 </Border.StrokeShape>
             </Border>
 
-            <Label Text="Bienvenido" TextColor="#101010" FontSize="Title" HorizontalOptions="Center" FontAttributes="Bold"></Label>
+            <Label Text="Bienvenido" TextColor="Black" FontSize="Title" HorizontalOptions="Center" FontAttributes="Bold"></Label>
 
             <StackLayout Orientation="Vertical" Margin="0,10" Spacing="5" HorizontalOptions="Center">
                 <Label Text="Ingrese sus credenciales" FontSize="Small" FontFamily="Charger Sport Black Extended" HorizontalOptions="Center"/>

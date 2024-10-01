@@ -9,13 +9,13 @@
              >
     <StackLayout Orientation="Vertical" Spacing="10" Padding="15">
         <Label Text="Detalle de pago" FontSize="Title" FontAttributes="Bold"/>
-        <Label Text="Acontinuación debe seleccionar la dirección de envio y la tarjeta de pago. Proximamente retiros en tienda" TextColor="SlateGray"  FontFamily="Charger Sport Black Extended" FontSize="Small"/>
+        <Label Text="Acontinuación debe seleccionar la dirección de envio y la tarjeta de pago. Proximamente retiros en tienda" TextColor="White" FontAttributes="Bold"  FontFamily="Charger Sport Black Extended" FontSize="Small"/>
         <Border HorizontalOptions="FillAndExpand" Stroke="#dadada"></Border>
         
         <StackLayout Orientation="Horizontal" Spacing="10">
             <ImageButton Source="location_icon.svg" BackgroundColor="White" HeightRequest="20"  VerticalOptions="Center" WidthRequest="20"  />
             <Label Text="Mis direcciones" FontAttributes="Bold" FontSize="Subtitle" VerticalOptions="Center"/>
-            <Label Text="Agregar" TextColor="DodgerBlue" HorizontalOptions="EndAndExpand" Margin="4">
+            <Label Text="Agregar" TextColor="Black" FontAttributes="Bold" HorizontalOptions="EndAndExpand" Margin="4">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding IrDireccionEventCommand }"/>
                 </Label.GestureRecognizers>
@@ -55,7 +55,7 @@
         <StackLayout Orientation="Horizontal" Spacing="10">
             <ImageButton Source="card_icon.svg" BackgroundColor="White" HeightRequest="20"  VerticalOptions="Center" WidthRequest="20"  />
             <Label Text="Mis tarjetas" FontAttributes="Bold" FontSize="Subtitle" VerticalOptions="Center"/>
-            <Label Text="Agregar" TextColor="DodgerBlue" HorizontalOptions="EndAndExpand" Margin="4">
+            <Label Text="Agregar" TextColor="Black" FontAttributes="Bold" HorizontalOptions="EndAndExpand" Margin="4">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding IrTarjetaEventCommand }"/>
                 </Label.GestureRecognizers>
@@ -96,6 +96,6 @@
             <Label Text="Total" FontSize="Subtitle" FontAttributes="Bold"/>
             <Label Text="{Binding TotalCompra, StringFormat='{0:C}'}" FontSize="Subtitle" FontAttributes="Bold" HorizontalOptions="EndAndExpand" TextColor="#1d94ab"/>
         </StackLayout>
-        <Button Text="Realizar compra" BackgroundColor="#1d94ab" Command="{Binding RealizarCompraEventCommand}"/>
+        <Button Text="Realizar compra" TextColor="Black" FontAttributes="Bold" BackgroundColor="#1d94ab" Command="{Binding RealizarCompraEventCommand}"/>
     </StackLayout>
 </ContentPage>

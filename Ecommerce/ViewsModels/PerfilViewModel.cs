@@ -12,27 +12,6 @@ namespace Ecommerce.ViewsModels
 {
     public partial class PerfilViewModel : ObservableObject
     {
-        //private User _user;
-
-        //public User User
-        //{
-        //    get => _user;
-        //    set
-        //    {
-        //        _user = value;
-        //        OnPropertyChanged(nameof(User));
-        //    }
-        //}
-
-        //public PerfilViewModel()
-        //{
-        //    // Asignar el correo del usuario autenticado (simulado)
-        //    User = new User { Email = "usuario@ejemplo.com" };
-        //}
-
-        //public event PropertyChangedEventHandler PropertyChanged;
-        //protected void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        //---->
         [RelayCommand]
         public async Task CerrarSesion()
         {
